@@ -4,7 +4,7 @@ import{
     getAuth,
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
-} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
 
 
 const firebaseConfig = {
@@ -19,20 +19,19 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth();
-
-
+//const database = getDatabase(app);
+const auth = getAuth(app);
 
 //login field
 const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
-const submitInput = document.getElementById("submit");
+const submitButton = document.getElementById("submit");
 
 //create account
 const signupEmailIn = document.getElementById("email-signup");
 const confirmSignupEmailIn = document.getElementById("confirm-email-signup");
 const signupPasswordIn = document.getElementById("password-signup");
-const confirmsignupPasswordIn = document.getElementById("confirm-password-signup");
+const confirmSignUpPasswordIn = document.getElementById("confirm-password-signup");
 const createacctbtn = document.getElementById("create-acct-btn");
 
 const main = document.getElementById("main");
@@ -40,6 +39,7 @@ const createacct = document.getElementById("create-acct");
 
 const signupButton = document.getElementById("sign-up");
 const returnBtn = document.getElementById("return-btn");
+
 var email,
   password,
   signupEmail,
@@ -81,7 +81,7 @@ createacctbtn.addEventListener("click", function () {
         // const user = userCredential.user;
         // ...
         window.alert("Success! Account created.");
-        window.location = "./createTask.html";
+        window.location = "./home.html";
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -105,7 +105,7 @@ submitButton.addEventListener("click", function () {
       const user = userCredential.user;
 
       window.alert("Success! Welcome back!");
-      window.location = "./createTask.html";
+      window.location = "./home.html";
 
       // ...
     })
