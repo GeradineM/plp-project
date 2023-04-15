@@ -140,7 +140,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #0deb1f;
+    background-color: #fff;
     padding: 40px 80px;
   }
 
@@ -153,7 +153,7 @@ body {
 
   .links span {
     font-size: 20px;
-    color: #fff;
+    color: black;
     text-transform: uppercase;
     margin: 10px 0;
   }
