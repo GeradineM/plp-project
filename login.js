@@ -81,7 +81,7 @@ createacctbtn.addEventListener("click", function () {
         // const user = userCredential.user;
         // ...
         window.alert("Success! Account created.");
-        window.location = "./home.html";
+        window.location = "./homepage.html";
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -105,7 +105,7 @@ submitButton.addEventListener("click", function () {
       const user = userCredential.user;
 
       window.alert("Success! Welcome back!");
-      window.location = "./home.html";
+      window.location = "./homepage.html";
 
       // ...
     })
